@@ -81,8 +81,27 @@ dev.off()
 
 cat("\n")
 
+shapiro_first = shapiro.test(first_pct)
+shapiro_last = shapiro.test(last_pct)
+shapiro_avg = shapiro.test(avg_pct)
+
+print("The Shapiro Wilks test results for first year %, last year %, and avg %, respectivly.")
+print(shapiro_first)
+print(shapiro_last)
+print(shapiro_avg)
+
+print("Hypothesis tests to check if the first year % and last year % are equal, first result is at a 95% CI and second is at 99% CI.")
 hypothesis_test1_95 = t.test(first_pct, last_pct)
 print(hypothesis_test1_95)
 
 hypothesis_test1_99 = t.test(first_pct, last_pct, conf.level=.99)
 print(hypothesis_test1_99)
+
+data = data.frame(first_pct, avg_pct, last_pct)
+
+names(data)[names(data) == "first_pct"] <- "First %"
+names(data)[names(data) == "avg_pct"] <- "Avg %"
+names(data)[names(data) == "last_pct"] <- "Last %"
+
+
+print(data)
