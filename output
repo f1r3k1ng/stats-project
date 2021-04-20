@@ -108,3 +108,11 @@ null device
 18    55.6   57.1  58.4
 19    41.4   51.9  48.6
 20    45.2   33.9  41.8
+
+[1] "Bartlett test is used to test that variance is homogenous across the different samples"
+
+	Bartlett test of homogeneity of variances
+
+data:  data
+Bartlett's K-squared = 32.902, df = 2, p-value = 7.167e-08
+

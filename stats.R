@@ -123,4 +123,8 @@ names(my_data)[names(my_data) == "last_pct"] <- "Last %"
 names(my_data)[names(my_data) == "avg_pct"] <- "Avg %"
 
 print(my_data)
+cat("\n")
 
+bartlett = bartlett.test(data)
+print("Bartlett test is used to test that variance is homogenous across the different samples")
+print(bartlett)
