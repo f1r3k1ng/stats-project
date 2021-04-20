@@ -60,11 +60,17 @@ print(paste('Average FG % variance:', avg_var))
 print(paste('Average FG % standard deviation:', avg_sd))
 
 jpeg("avg_scatter", width = 350, height = 350)
-plot(last_pct)
+plot(avg_pct)
 dev.off()
 
 jpeg("avg_boxplot", width = 350, height = 350)
-boxplot(last_pct)
+boxplot(avg_pct)
 dev.off()
 
 cat("\n")
+
+hypothesis_test1_95 = t.test(first_pct, last_pct)
+print(hypothesis_test1_95)
+
+hypothesis_test1_99 = t.test(first_pct, last_pct, conf.level=.99)
+print(hypothesis_test1_99)

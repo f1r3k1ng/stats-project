@@ -31,3 +31,27 @@ null device
 null device 
           1 
 
+
+	Welch Two Sample t-test
+
+data:  first_pct and last_pct
+t = -0.57634, df = 24.421, p-value = 0.5697
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -11.513124   6.483124
+sample estimates:
+mean of x mean of y 
+   45.165    47.680 
+
+
+	Welch Two Sample t-test
+
+data:  first_pct and last_pct
+t = -0.57634, df = 24.421, p-value = 0.5697
+alternative hypothesis: true difference in means is not equal to 0
+99 percent confidence interval:
+ -14.702242   9.672242
+sample estimates:
+mean of x mean of y 
+   45.165    47.680 
+
