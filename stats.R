@@ -1,7 +1,11 @@
+install.packages("qqplotr")
+library("qqplotr")
+
 # Populate all the lists
 first_pct = c(53.8, 52.5, 26.5, 44.1, 40, 42.2, 41.8, 53.4, 36.1, 43, 41.9, 45.3, 46.1, 42.5, 50.8, 48.4, 52.7, 55.6, 41.4, 45.2)
 last_pct = c(75, 100, 34.2, 40.2, 58.3, 23.7, 42, 44.7, 38.1, 44.2, 42.5, 21.4, 72.7, 41.1, 47.7, 45.9, 39.0, 57.1, 51.9, 33.9)
 avg_pct = c(51.1, 46.8, 37.2, 44.9, 40.7, 45.6, 44.1, 48.4, 38.5, 45.2, 44.8, 47.2, 54.0, 44.5, 53.4, 44.7, 46.7, 58.4, 48.6, 41.8)
+
 
 # Calculate the mean of the lists
 first_mean = mean(first_pct)
@@ -97,11 +101,26 @@ print(hypothesis_test1_95)
 hypothesis_test1_99 = t.test(first_pct, last_pct, conf.level=.99)
 print(hypothesis_test1_99)
 
-data = data.frame(first_pct, avg_pct, last_pct)
-
-names(data)[names(data) == "first_pct"] <- "First %"
-names(data)[names(data) == "avg_pct"] <- "Avg %"
-names(data)[names(data) == "last_pct"] <- "Last %"
 
 
-print(data)
+data = data.frame(first_pct, last_pct, avg_pct)
+my_data = data.frame(first_pct, last_pct, avg_pct)
+
+jpeg("qqplot_first", width = 350, height = 350)
+ggplot(data = data, mapping = aes(sample = first_pct)) + stat_qq_band() + stat_qq_line() + stat_qq_point()
+dev.off()
+
+jpeg("qqplot_last", width = 350, height = 350)
+ggplot(data = data, mapping = aes(sample = last_pct)) + stat_qq_band() + stat_qq_line() + stat_qq_point()
+dev.off()
+
+jpeg("qqplot_avg", width = 350, height = 350)
+ggplot(data = data, mapping = aes(sample = avg_pct)) + stat_qq_band() + stat_qq_line() + stat_qq_point()
+dev.off()
+
+names(my_data)[names(my_data) == "first_pct"] <- "First %"
+names(my_data)[names(my_data) == "last_pct"] <- "Last %"
+names(my_data)[names(my_data) == "avg_pct"] <- "Avg %"
+
+print(my_data)
+
