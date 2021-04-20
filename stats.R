@@ -33,6 +33,10 @@ jpeg("first_boxplot", width = 350, height = 350)
 boxplot(first_pct)
 dev.off()
 
+jpeg("first_histogram", width = 350, height = 350)
+hist(first_pct)
+dev.off()
+
 cat("\n")
 
 ### Print ending FG % info ###
@@ -50,6 +54,10 @@ jpeg("last_boxplot", width = 350, height = 350)
 boxplot(last_pct)
 dev.off()
 
+jpeg("last_histogram", width = 350, height = 350)
+hist(last_pct)
+dev.off()
+
 cat("\n")
 
 ### Print average FG % info ###
@@ -65,6 +73,10 @@ dev.off()
 
 jpeg("avg_boxplot", width = 350, height = 350)
 boxplot(avg_pct)
+dev.off()
+
+jpeg("avg_histogram", width = 350, height = 350)
+hist(avg_pct)
 dev.off()
 
 cat("\n")
