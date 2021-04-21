@@ -1,4 +1,4 @@
-install.packages("qqplotr")
+#install.packages("qqplotr")
 library("qqplotr")
 
 # Populate all the lists
@@ -128,3 +128,10 @@ cat("\n")
 bartlett = bartlett.test(data)
 print("Bartlett test is used to test that variance is homogenous across the different samples")
 print(bartlett)
+
+all = c(first_pct, last_pct, avg_pct)
+group = c(rep(1, 20), rep(2, 20), rep(3, 20))
+anova = data.frame(all, group)
+result = aov(all ~ group, data = anova)
+print(result)
+summary(result)

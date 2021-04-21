@@ -116,3 +116,16 @@ null device
 data:  data
 Bartlett's K-squared = 32.902, df = 2, p-value = 7.167e-08
 
+Call:
+   aov(formula = all ~ group, data = anova)
+
+Terms:
+                   group Residuals
+Sum of Squares    13.572  7787.714
+Deg. of Freedom        1        58
+
+Residual standard error: 11.58753
+Estimated effects may be unbalanced
+            Df Sum Sq Mean Sq F value Pr(>F)
+group        1     14   13.57   0.101  0.752
+Residuals   58   7788  134.27               
