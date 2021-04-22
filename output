@@ -133,17 +133,6 @@ null device
 
 
 
-[1] "Bartlett test is used to test that variance is homogenous across the different samples"
-
-	Bartlett test of homogeneity of variances
-
-data:  data
-Bartlett's K-squared = 32.902, df = 2, p-value = 7.167e-08
-
-
-
-
-
 [1] "An anova test was used to determine of all of the means were equal to each other"
 Call:
    aov(formula = all ~ group, data = anova)
@@ -158,6 +147,11 @@ Estimated effects may be unbalanced
             Df Sum Sq Mean Sq F value Pr(>F)
 group        2     63   31.68   0.233  0.793
 Residuals   57   7738  135.75               
+
+
+
+
+[1] "Bartlett test is used to test that variance is homogenous across the different samples"
 
 
 
@@ -288,7 +282,53 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 
 
 
-function (x, ...) 
-UseMethod("lag")
-<bytecode: 0x561865032a88>
-<environment: namespace:stats>
+   Shooting % # Seasons  Lag
+1        53.4         1   NA
+2        41.7         2 53.4
+3        49.0         3 41.7
+4        51.9         4 49.0
+5        49.7         5 51.9
+6        46.7         6 49.7
+7        48.6         7 46.7
+8        49.1         8 48.6
+9        47.5         9 49.1
+10       48.1        10 47.5
+11       46.1        11 48.1
+12       37.9        12 46.1
+13       44.7        13 37.9
+
+
+
+
+   Shooting % # Seasons  Lag
+1        41.9         1   NA
+2        47.8         2 41.9
+3        42.0         3 47.8
+4        44.8         4 42.0
+5        46.5         5 44.8
+6        43.8         6 46.5
+7        46.4         7 43.8
+8        41.8         8 46.4
+9        42.5         9 41.8
+10       40.9        10 42.5
+11       46.6        11 40.9
+12       45.1        12 46.6
+13       42.5        13 45.1
+
+
+
+
+   Shooting % # Seasons  Lag
+1        50.8         1   NA
+2        46.8         2 50.8
+3        45.3         3 46.8
+4        50.0         4 45.3
+5        43.5         5 50.0
+6        59.9         6 43.5
+7        58.1         7 59.9
+8        49.5         8 58.1
+9        50.8         9 49.5
+10       53.2        10 50.8
+11       55.1        11 53.2
+12       57.1        12 55.1
+13       47.7        13 57.1

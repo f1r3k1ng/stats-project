@@ -1,5 +1,6 @@
 #install.packages("qqplotr")
 library("qqplotr")
+library("dplyr")
 
 # Populate all the lists
 first_pct = c(53.8, 52.5, 26.5, 44.1, 40, 42.2, 41.8, 53.4, 36.1, 43, 41.9, 45.3, 46.1, 42.5, 50.8, 48.4, 52.7, 55.6, 41.4, 45.2)
@@ -152,15 +153,6 @@ cat("\n")
 cat("\n")
 cat("\n")
 
-bartlett = bartlett.test(data)
-print("Bartlett test is used to test that variance is homogenous across the different samples")
-print(bartlett)
-
-cat("\n")
-cat("\n")
-cat("\n")
-cat("\n")
-
 print("An anova test was used to determine of all of the means were equal to each other")
 
 all = c(first_pct, last_pct, avg_pct)
@@ -170,6 +162,15 @@ anova$group = as.factor(anova$group)
 result = aov(all ~ group, data = anova)
 print(result)
 summary(result)
+
+cat("\n")
+cat("\n")
+cat("\n")
+cat("\n")
+
+#bartlett = bartlett.test(anova)
+print("Bartlett test is used to test that variance is homogenous across the different samples")
+#print(bartlett)
 
 cat("\n")
 cat("\n")
@@ -295,5 +296,34 @@ cat("\n")
 cat("\n")
 cat("\n")
 
-lag
-linear_reg = lm 
+
+dc_df = data.frame(cbind(dc, 1:13, lag(dc, 1)))
+names(dc_df)[names(dc_df) == "dc"] <- "Shooting %"
+names(dc_df)[names(dc_df) == "V2"] <- "# Seasons"
+names(dc_df)[names(dc_df) == "V3"] <- "Lag"
+
+tb_df = data.frame(cbind(tb, 1:13, lag(tb, 1)))
+names(tb_df)[names(tb_df) == "tb"] <- "Shooting %"
+names(tb_df)[names(tb_df) == "V2"] <- "# Seasons"
+names(tb_df)[names(tb_df) == "V3"] <- "Lag"
+
+kk_df = data.frame(cbind(kk, 1:13, lag(kk, 1)))
+names(kk_df)[names(kk_df) == "kk"] <- "Shooting %"
+names(kk_df)[names(kk_df) == "V2"] <- "# Seasons"
+names(kk_df)[names(kk_df) == "V3"] <- "Lag"
+
+print(dc_df)
+
+cat("\n")
+cat("\n")
+cat("\n")
+cat("\n")
+
+print(tb_df)
+
+cat("\n")
+cat("\n")
+cat("\n")
+cat("\n")
+
+print(kk_df)
