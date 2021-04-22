@@ -267,12 +267,33 @@ cat("\n")
 cat("\n")
 cat("\n")
 
+player_data = data.frame(dc, tb, kk)
+print(player_data)
+
+cat("\n")
+cat("\n")
+cat("\n")
+cat("\n")
+
 full = c(dc, tb, kk)
 grouping = c(rep(1, 13), rep(2, 13), rep(3, 13))
 reg = data.frame(full, grouping)
+reg$grouping = as.factor(reg$grouping)
 print(reg)
 
 cat("\n")
 cat("\n")
 cat("\n")
 cat("\n")
+
+reg_anova = aov(full ~ grouping, data = reg)
+print(reg_anova)
+summary(reg_anova)
+
+cat("\n")
+cat("\n")
+cat("\n")
+cat("\n")
+
+lag
+linear_reg = lm 
