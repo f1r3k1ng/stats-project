@@ -363,6 +363,8 @@ Residual standard error: 3.878 on 9 degrees of freedom
 Multiple R-squared:  0.1545,	Adjusted R-squared:  -0.03339 
 F-statistic: 0.8223 on 2 and 9 DF,  p-value: 0.4699
 
+null device 
+          1 
 
 Call:
 lm(formula = Shooting ~ . * ., data = dc_df)
@@ -385,6 +387,8 @@ Residual standard error: 3.858 on 8 degrees of freedom
 Multiple R-squared:  0.2562,	Adjusted R-squared:  -0.02275 
 F-statistic: 0.9184 on 3 and 8 DF,  p-value: 0.4744
 
+null device 
+          1 
 
 Call:
 lm(formula = Shooting ~ poly(Seasons, 2) + Lag, data = dc_df)
@@ -407,6 +411,8 @@ Residual standard error: 2.705 on 8 degrees of freedom
 Multiple R-squared:  0.6343,	Adjusted R-squared:  0.4972 
 F-statistic: 4.625 on 3 and 8 DF,  p-value: 0.03699
 
+null device 
+          1 
 
 
 
@@ -432,6 +438,8 @@ Residual standard error: 2.227 on 9 degrees of freedom
 Multiple R-squared:  0.2232,	Adjusted R-squared:  0.05064 
 F-statistic: 1.293 on 2 and 9 DF,  p-value: 0.3208
 
+null device 
+          1 
 
 Call:
 lm(formula = Shooting ~ . * ., data = tb_df)
@@ -454,6 +462,8 @@ Residual standard error: 2.207 on 8 degrees of freedom
 Multiple R-squared:  0.3217,	Adjusted R-squared:  0.06731 
 F-statistic: 1.265 on 3 and 8 DF,  p-value: 0.35
 
+null device 
+          1 
 
 Call:
 lm(formula = Shooting ~ poly(Seasons, 2) + Lag, data = tb_df)
@@ -476,6 +486,8 @@ Residual standard error: 2.298 on 8 degrees of freedom
 Multiple R-squared:  0.2648,	Adjusted R-squared:  -0.0109 
 F-statistic: 0.9605 on 3 and 8 DF,  p-value: 0.4569
 
+null device 
+          1 
 
 
 
@@ -501,6 +513,8 @@ Residual standard error: 5.33 on 9 degrees of freedom
 Multiple R-squared:  0.167,	Adjusted R-squared:  -0.0181 
 F-statistic: 0.9022 on 2 and 9 DF,  p-value: 0.4394
 
+null device 
+          1 
 
 Call:
 lm(formula = Shooting ~ . * ., data = kk_df)
@@ -521,6 +535,8 @@ Residual standard error: 5.343 on 8 degrees of freedom
 Multiple R-squared:  0.2561,	Adjusted R-squared:  -0.02289 
 F-statistic: 0.9179 on 3 and 8 DF,  p-value: 0.4746
 
+null device 
+          1 
 
 Call:
 lm(formula = Shooting ~ poly(Seasons, 2) + Lag, data = kk_df)
@@ -543,3 +559,5 @@ Residual standard error: 5.106 on 8 degrees of freedom
 Multiple R-squared:  0.3205,	Adjusted R-squared:  0.0657 
 F-statistic: 1.258 on 3 and 8 DF,  p-value: 0.352
 
+null device 
+          1 

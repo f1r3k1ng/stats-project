@@ -335,12 +335,21 @@ cat("\n")
 
 dc_lm = lm(Shooting ~ ., data = dc_df) 
 summary(dc_lm)
+jpeg("dc_regression", width = 350, height = 350)
+plot(dc_lm)
+dev.off()
 
 dc_lm1 = lm(Shooting ~ .*., data = dc_df)
 summary(dc_lm1)
+jpeg("dc_regression1", width = 350, height = 350)
+plot(dc_lm1)
+dev.off()
 
 dc_lm2 = lm(Shooting ~ poly(Seasons, 2) + Lag,  data = dc_df)
 summary(dc_lm2)
+jpeg("dc_regression2", width = 350, height = 350)
+plot(dc_lm2)
+dev.off()
 
 cat("\n")
 cat("\n")
@@ -349,12 +358,21 @@ cat("\n")
 
 tb_lm = lm(Shooting ~ ., data = tb_df) 
 summary(tb_lm)
+jpeg("tb_regression", width = 350, height = 350)
+plot(tb_lm)
+dev.off()
 
 tb_lm1 = lm(Shooting ~ .*., data = tb_df)
 summary(tb_lm1)
+jpeg("tb_regression1", width = 350, height = 350)
+plot(tb_lm1)
+dev.off()
 
 tb_lm2 = lm(Shooting ~ poly(Seasons, 2) + Lag,  data = tb_df)
 summary(tb_lm2)
+jpeg("tb_regression2", width = 350, height = 350)
+plot(tb_lm2)
+dev.off()
 
 cat("\n")
 cat("\n")
@@ -363,9 +381,19 @@ cat("\n")
 
 kk_lm = lm(Shooting ~ ., data = kk_df) 
 summary(kk_lm)
+jpeg("kk_regression", width = 350, height = 350)
+plot(kk_lm)
+dev.off()
 
 kk_lm1 = lm(Shooting ~ .*., data = kk_df)
 summary(kk_lm1)
+jpeg("kk_regression1", width = 350, height = 350)
+plot(kk_lm1)
+dev.off()
 
 kk_lm2 = lm(Shooting ~ poly(Seasons, 2) + Lag,  data = kk_df)
 summary(kk_lm2)
+
+jpeg("kk_regression2", width = 350, height = 350)
+plot(kk_lm2)
+dev.off()
