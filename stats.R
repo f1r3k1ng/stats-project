@@ -42,6 +42,9 @@ hist(first_pct)
 dev.off()
 
 cat("\n")
+cat("\n")
+cat("\n")
+cat("\n")
 
 ### Print ending FG % info ###
 print('List of ending FG %:')
@@ -62,6 +65,9 @@ jpeg("last_histogram", width = 350, height = 350)
 hist(last_pct)
 dev.off()
 
+cat("\n")
+cat("\n")
+cat("\n")
 cat("\n")
 
 ### Print average FG % info ###
@@ -84,6 +90,9 @@ hist(avg_pct)
 dev.off()
 
 cat("\n")
+cat("\n")
+cat("\n")
+cat("\n")
 
 shapiro_first = shapiro.test(first_pct)
 shapiro_last = shapiro.test(last_pct)
@@ -94,14 +103,28 @@ print(shapiro_first)
 print(shapiro_last)
 print(shapiro_avg)
 
+cat("\n")
+cat("\n")
+cat("\n")
+cat("\n")
+
+
 print("Hypothesis tests to check if the first year % and last year % are equal, first result is at a 95% CI and second is at 99% CI.")
 hypothesis_test1_95 = t.test(first_pct, last_pct)
 print(hypothesis_test1_95)
 
+cat("\n")
+cat("\n")
+cat("\n")
+cat("\n")
+
 hypothesis_test1_99 = t.test(first_pct, last_pct, conf.level=.99)
 print(hypothesis_test1_99)
 
-
+cat("\n")
+cat("\n")
+cat("\n")
+cat("\n")
 
 data = data.frame(first_pct, last_pct, avg_pct)
 my_data = data.frame(first_pct, last_pct, avg_pct)
@@ -123,20 +146,35 @@ names(my_data)[names(my_data) == "last_pct"] <- "Last %"
 names(my_data)[names(my_data) == "avg_pct"] <- "Avg %"
 
 print(my_data)
+
+cat("\n")
+cat("\n")
+cat("\n")
 cat("\n")
 
 bartlett = bartlett.test(data)
 print("Bartlett test is used to test that variance is homogenous across the different samples")
 print(bartlett)
 
+cat("\n")
+cat("\n")
+cat("\n")
+cat("\n")
+
 print("An anova test was used to determine of all of the means were equal to each other")
 
 all = c(first_pct, last_pct, avg_pct)
 group = c(rep(1, 20), rep(2, 20), rep(3, 20))
 anova = data.frame(all, group)
+anova$group = as.factor(anova$group)
 result = aov(all ~ group, data = anova)
 print(result)
 summary(result)
+
+cat("\n")
+cat("\n")
+cat("\n")
+cat("\n")
 
 dc = c(53.4, 41.7, 49.0, 51.9, 49.7, 46.7, 48.6, 49.1, 47.5, 48.1, 46.1,37.9, 44.7)
 tb = c(41.9, 47.8, 42.0, 44.8, 46.5, 43.8, 46.4, 41.8, 42.5, 40.9, 46.6, 45.1, 42.5)
@@ -177,6 +215,9 @@ hist(dc)
 dev.off()
 
 cat("\n")
+cat("\n")
+cat("\n")
+cat("\n")
 
 ### Print ending FG % info ###
 print('List of Terrell Brandon %:')
@@ -198,6 +239,9 @@ hist(tb)
 dev.off()
 
 cat("\n")
+cat("\n")
+cat("\n")
+cat("\n")
 
 ### Print average FG % info ###
 print('List of Kosta Koufas %:')
@@ -218,4 +262,17 @@ jpeg("kk_histogram", width = 350, height = 350)
 hist(kk)
 dev.off()
 
+cat("\n")
+cat("\n")
+cat("\n")
+cat("\n")
+
+full = c(dc, tb, kk)
+grouping = c(rep(1, 13), rep(2, 13), rep(3, 13))
+reg = data.frame(full, grouping)
+print(reg)
+
+cat("\n")
+cat("\n")
+cat("\n")
 cat("\n")

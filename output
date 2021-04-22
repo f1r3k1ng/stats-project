@@ -11,6 +11,9 @@ null device
 null device 
           1 
 
+
+
+
 [1] "List of ending FG %:"
  [1]  75.0 100.0  34.2  40.2  58.3  23.7  42.0  44.7  38.1  44.2  42.5  21.4
 [13]  72.7  41.1  47.7  45.9  39.0  57.1  51.9  33.9
@@ -24,6 +27,9 @@ null device
 null device 
           1 
 
+
+
+
 [1] "List of average FG %:"
  [1] 51.1 46.8 37.2 44.9 40.7 45.6 44.1 48.4 38.5 45.2 44.8 47.2 54.0 44.5 53.4
 [16] 44.7 46.7 58.4 48.6 41.8
@@ -36,6 +42,9 @@ null device
           1 
 null device 
           1 
+
+
+
 
 [1] "The Shapiro Wilks test results for first year %, last year %, and avg %, respectivly."
 
@@ -56,6 +65,10 @@ W = 0.88634, p-value = 0.02305
 data:  avg_pct
 W = 0.96129, p-value = 0.57
 
+
+
+
+
 [1] "Hypothesis tests to check if the first year % and last year % are equal, first result is at a 95% CI and second is at 99% CI."
 
 	Welch Two Sample t-test
@@ -70,6 +83,10 @@ mean of x mean of y
    45.165    47.680 
 
 
+
+
+
+
 	Welch Two Sample t-test
 
 data:  first_pct and last_pct
@@ -80,6 +97,10 @@ alternative hypothesis: true difference in means is not equal to 0
 sample estimates:
 mean of x mean of y 
    45.165    47.680 
+
+
+
+
 
 null device 
           1 
@@ -109,6 +130,9 @@ null device
 19    41.4   51.9  48.6
 20    45.2   33.9  41.8
 
+
+
+
 [1] "Bartlett test is used to test that variance is homogenous across the different samples"
 
 	Bartlett test of homogeneity of variances
@@ -116,20 +140,28 @@ null device
 data:  data
 Bartlett's K-squared = 32.902, df = 2, p-value = 7.167e-08
 
+
+
+
+
 [1] "An anova test was used to determine of all of the means were equal to each other"
 Call:
    aov(formula = all ~ group, data = anova)
 
 Terms:
                    group Residuals
-Sum of Squares    13.572  7787.714
-Deg. of Freedom        1        58
+Sum of Squares    63.366  7737.919
+Deg. of Freedom        2        57
 
-Residual standard error: 11.58753
+Residual standard error: 11.65131
 Estimated effects may be unbalanced
             Df Sum Sq Mean Sq F value Pr(>F)
-group        1     14   13.57   0.101  0.752
-Residuals   58   7788  134.27               
+group        2     63   31.68   0.233  0.793
+Residuals   57   7738  135.75               
+
+
+
+
 [1] "List of Dave Corzine %:"
  [1] 53.4 41.7 49.0 51.9 49.7 46.7 48.6 49.1 47.5 48.1 46.1 37.9 44.7
 [1] "Dave Corzine mean: 47.2615384615385"
@@ -141,6 +173,9 @@ null device
           1 
 null device 
           1 
+
+
+
 
 [1] "List of Terrell Brandon %:"
  [1] 41.9 47.8 42.0 44.8 46.5 43.8 46.4 41.8 42.5 40.9 46.6 45.1 42.5
@@ -154,6 +189,9 @@ null device
 null device 
           1 
 
+
+
+
 [1] "List of Kosta Koufas %:"
  [1] 50.8 46.8 45.3 50.0 43.5 59.9 58.1 49.5 50.8 53.2 55.1 57.1 47.7
 [1] "Kosta Koufas mean: 51.3692307692308"
@@ -165,4 +203,51 @@ null device
           1 
 null device 
           1 
+
+
+
+
+   full grouping
+1  53.4        1
+2  41.7        1
+3  49.0        1
+4  51.9        1
+5  49.7        1
+6  46.7        1
+7  48.6        1
+8  49.1        1
+9  47.5        1
+10 48.1        1
+11 46.1        1
+12 37.9        1
+13 44.7        1
+14 41.9        2
+15 47.8        2
+16 42.0        2
+17 44.8        2
+18 46.5        2
+19 43.8        2
+20 46.4        2
+21 41.8        2
+22 42.5        2
+23 40.9        2
+24 46.6        2
+25 45.1        2
+26 42.5        2
+27 50.8        3
+28 46.8        3
+29 45.3        3
+30 50.0        3
+31 43.5        3
+32 59.9        3
+33 58.1        3
+34 49.5        3
+35 50.8        3
+36 53.2        3
+37 55.1        3
+38 57.1        3
+39 47.7        3
+
+
+
 
