@@ -129,9 +129,93 @@ bartlett = bartlett.test(data)
 print("Bartlett test is used to test that variance is homogenous across the different samples")
 print(bartlett)
 
+print("An anova test was used to determine of all of the means were equal to each other")
+
 all = c(first_pct, last_pct, avg_pct)
 group = c(rep(1, 20), rep(2, 20), rep(3, 20))
 anova = data.frame(all, group)
 result = aov(all ~ group, data = anova)
 print(result)
 summary(result)
+
+dc = c(53.4, 41.7, 49.0, 51.9, 49.7, 46.7, 48.6, 49.1, 47.5, 48.1, 46.1,37.9, 44.7)
+tb = c(41.9, 47.8, 42.0, 44.8, 46.5, 43.8, 46.4, 41.8, 42.5, 40.9, 46.6, 45.1, 42.5)
+kk = c(50.8, 46.8, 45.3, 50.0, 43.5, 59.9, 58.1, 49.5, 50.8, 53.2, 55.1, 57.1, 47.7)
+
+# Calculate the mean of the lists
+dc_mean = mean(dc)
+tb_mean = mean(tb)
+kk_mean = mean(kk)
+
+# Calculate the variance of the lists
+dc_var = var(dc)
+tb_var = var(tb)
+kk_var = var(kk)
+
+# Calculate the standard deviation of the lists
+dc_sd = sd(dc)
+tb_sd = sd(tb)
+kk_sd = sd(kk)
+
+### Print first FG % info ###
+print('List of Dave Corzine %:')
+print(dc)
+print(paste('Dave Corzine mean:', dc_mean))
+print(paste('Dave Corzine variance:', dc_var))
+print(paste('Dave Corzine standard deviation:', dc_sd))
+
+jpeg("dc_scatter", width = 350, height = 350)
+plot(dc)
+dev.off()
+
+jpeg("dc_boxplot", width = 350, height = 350)
+boxplot(dc)
+dev.off()
+
+jpeg("dc_histogram", width = 350, height = 350)
+hist(dc)
+dev.off()
+
+cat("\n")
+
+### Print ending FG % info ###
+print('List of Terrell Brandon %:')
+print(tb)
+print(paste('Terrell Brandon mean:', tb_mean))
+print(paste('Terrell Brandon variance:', tb_var))
+print(paste('Terrell Brandon standard deviation:', tb_sd))
+
+jpeg("tb_scatter", width = 350, height = 350)
+plot(tb)
+dev.off()
+
+jpeg("tb_boxplot", width = 350, height = 350)
+boxplot(tb)
+dev.off()
+
+jpeg("tb_histogram", width = 350, height = 350)
+hist(tb)
+dev.off()
+
+cat("\n")
+
+### Print average FG % info ###
+print('List of Kosta Koufas %:')
+print(kk)
+print(paste('Kosta Koufas mean:', kk_mean))
+print(paste('Kosta Koufas variance:', kk_var))
+print(paste('Kosta Koufas standard deviation:', kk_sd))
+
+jpeg("kk_scatter", width = 350, height = 350)
+plot(kk)
+dev.off()
+
+jpeg("kk_boxplot", width = 350, height = 350)
+boxplot(kk)
+dev.off()
+
+jpeg("kk_histogram", width = 350, height = 350)
+hist(kk)
+dev.off()
+
+cat("\n")
