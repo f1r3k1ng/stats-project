@@ -168,9 +168,9 @@ cat("\n")
 cat("\n")
 cat("\n")
 
-#bartlett = bartlett.test(anova)
+bartlett = bartlett.test(data)
 print("Bartlett test is used to test that variance is homogenous across the different samples")
-#print(bartlett)
+print(bartlett)
 
 cat("\n")
 cat("\n")
@@ -298,18 +298,18 @@ cat("\n")
 
 
 dc_df = data.frame(cbind(dc, 1:13, lag(dc, 1)))
-names(dc_df)[names(dc_df) == "dc"] <- "Shooting %"
-names(dc_df)[names(dc_df) == "V2"] <- "# Seasons"
+names(dc_df)[names(dc_df) == "dc"] <- "Shooting"
+names(dc_df)[names(dc_df) == "V2"] <- "Seasons"
 names(dc_df)[names(dc_df) == "V3"] <- "Lag"
 
 tb_df = data.frame(cbind(tb, 1:13, lag(tb, 1)))
-names(tb_df)[names(tb_df) == "tb"] <- "Shooting %"
-names(tb_df)[names(tb_df) == "V2"] <- "# Seasons"
+names(tb_df)[names(tb_df) == "tb"] <- "Shooting"
+names(tb_df)[names(tb_df) == "V2"] <- "Seasons"
 names(tb_df)[names(tb_df) == "V3"] <- "Lag"
 
 kk_df = data.frame(cbind(kk, 1:13, lag(kk, 1)))
-names(kk_df)[names(kk_df) == "kk"] <- "Shooting %"
-names(kk_df)[names(kk_df) == "V2"] <- "# Seasons"
+names(kk_df)[names(kk_df) == "kk"] <- "Shooting"
+names(kk_df)[names(kk_df) == "V2"] <- "Seasons"
 names(kk_df)[names(kk_df) == "V3"] <- "Lag"
 
 print(dc_df)
@@ -327,3 +327,45 @@ cat("\n")
 cat("\n")
 
 print(kk_df)
+
+cat("\n")
+cat("\n")
+cat("\n")
+cat("\n")
+
+dc_lm = lm(Shooting ~ ., data = dc_df) 
+summary(dc_lm)
+
+dc_lm1 = lm(Shooting ~ .*., data = dc_df)
+summary(dc_lm1)
+
+dc_lm2 = lm(Shooting ~ poly(Seasons, 2) + Lag,  data = dc_df)
+summary(dc_lm2)
+
+cat("\n")
+cat("\n")
+cat("\n")
+cat("\n")
+
+tb_lm = lm(Shooting ~ ., data = tb_df) 
+summary(tb_lm)
+
+tb_lm1 = lm(Shooting ~ .*., data = tb_df)
+summary(tb_lm1)
+
+tb_lm2 = lm(Shooting ~ poly(Seasons, 2) + Lag,  data = tb_df)
+summary(tb_lm2)
+
+cat("\n")
+cat("\n")
+cat("\n")
+cat("\n")
+
+kk_lm = lm(Shooting ~ ., data = kk_df) 
+summary(kk_lm)
+
+kk_lm1 = lm(Shooting ~ .*., data = kk_df)
+summary(kk_lm1)
+
+kk_lm2 = lm(Shooting ~ poly(Seasons, 2) + Lag,  data = kk_df)
+summary(kk_lm2)

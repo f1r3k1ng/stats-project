@@ -153,6 +153,12 @@ Residuals   57   7738  135.75
 
 [1] "Bartlett test is used to test that variance is homogenous across the different samples"
 
+	Bartlett test of homogeneity of variances
+
+data:  data
+Bartlett's K-squared = 32.902, df = 2, p-value = 7.167e-08
+
+
 
 
 
@@ -282,53 +288,258 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 
 
 
-   Shooting % # Seasons  Lag
-1        53.4         1   NA
-2        41.7         2 53.4
-3        49.0         3 41.7
-4        51.9         4 49.0
-5        49.7         5 51.9
-6        46.7         6 49.7
-7        48.6         7 46.7
-8        49.1         8 48.6
-9        47.5         9 49.1
-10       48.1        10 47.5
-11       46.1        11 48.1
-12       37.9        12 46.1
-13       44.7        13 37.9
+   Shooting Seasons  Lag
+1      53.4       1   NA
+2      41.7       2 53.4
+3      49.0       3 41.7
+4      51.9       4 49.0
+5      49.7       5 51.9
+6      46.7       6 49.7
+7      48.6       7 46.7
+8      49.1       8 48.6
+9      47.5       9 49.1
+10     48.1      10 47.5
+11     46.1      11 48.1
+12     37.9      12 46.1
+13     44.7      13 37.9
 
 
 
 
-   Shooting % # Seasons  Lag
-1        41.9         1   NA
-2        47.8         2 41.9
-3        42.0         3 47.8
-4        44.8         4 42.0
-5        46.5         5 44.8
-6        43.8         6 46.5
-7        46.4         7 43.8
-8        41.8         8 46.4
-9        42.5         9 41.8
-10       40.9        10 42.5
-11       46.6        11 40.9
-12       45.1        12 46.6
-13       42.5        13 45.1
+   Shooting Seasons  Lag
+1      41.9       1   NA
+2      47.8       2 41.9
+3      42.0       3 47.8
+4      44.8       4 42.0
+5      46.5       5 44.8
+6      43.8       6 46.5
+7      46.4       7 43.8
+8      41.8       8 46.4
+9      42.5       9 41.8
+10     40.9      10 42.5
+11     46.6      11 40.9
+12     45.1      12 46.6
+13     42.5      13 45.1
 
 
 
 
-   Shooting % # Seasons  Lag
-1        50.8         1   NA
-2        46.8         2 50.8
-3        45.3         3 46.8
-4        50.0         4 45.3
-5        43.5         5 50.0
-6        59.9         6 43.5
-7        58.1         7 59.9
-8        49.5         8 58.1
-9        50.8         9 49.5
-10       53.2        10 50.8
-11       55.1        11 53.2
-12       57.1        12 55.1
-13       47.7        13 57.1
+   Shooting Seasons  Lag
+1      50.8       1   NA
+2      46.8       2 50.8
+3      45.3       3 46.8
+4      50.0       4 45.3
+5      43.5       5 50.0
+6      59.9       6 43.5
+7      58.1       7 59.9
+8      49.5       8 58.1
+9      50.8       9 49.5
+10     53.2      10 50.8
+11     55.1      11 53.2
+12     57.1      12 55.1
+13     47.7      13 57.1
+
+
+
+
+
+Call:
+lm(formula = Shooting ~ ., data = dc_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6.9305 -0.6389  1.2900  2.4023  3.7168 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)   
+(Intercept)  56.4672    16.5959   3.402  0.00784 **
+Seasons      -0.4666     0.3692  -1.264  0.23804   
+Lag          -0.1310     0.3171  -0.413  0.68927   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 3.878 on 9 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.1545,	Adjusted R-squared:  -0.03339 
+F-statistic: 0.8223 on 2 and 9 DF,  p-value: 0.4699
+
+
+Call:
+lm(formula = Shooting ~ . * ., data = dc_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-7.3463 -0.9855  1.0297  1.9634  3.9357 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept) 79.22538   27.31612   2.900   0.0199 *
+Seasons     -3.43391    2.86112  -1.200   0.2644  
+Lag         -0.61488    0.56004  -1.098   0.3042  
+Seasons:Lag  0.06431    0.06149   1.046   0.3262  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 3.858 on 8 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.2562,	Adjusted R-squared:  -0.02275 
+F-statistic: 0.9184 on 3 and 8 DF,  p-value: 0.4744
+
+
+Call:
+lm(formula = Shooting ~ poly(Seasons, 2) + Lag, data = dc_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.3302 -1.4018  0.0219  1.8975  3.6611 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(>|t|)    
+(Intercept)        68.9025    11.6488   5.915 0.000356 ***
+poly(Seasons, 2)1  -5.2740     3.4882  -1.512 0.169003    
+poly(Seasons, 2)2 -11.8915     3.6704  -3.240 0.011881 *  
+Lag                -0.4728     0.2451  -1.929 0.089855 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.705 on 8 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.6343,	Adjusted R-squared:  0.4972 
+F-statistic: 4.625 on 3 and 8 DF,  p-value: 0.03699
+
+
+
+
+
+
+Call:
+lm(formula = Shooting ~ ., data = tb_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.4306 -1.6010 -0.0974  1.9060  2.6335 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  61.5315    12.8619   4.784 0.000996 ***
+Seasons      -0.1978     0.1863  -1.061 0.316140    
+Lag          -0.3582     0.2880  -1.244 0.245006    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.227 on 9 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.2232,	Adjusted R-squared:  0.05064 
+F-statistic: 1.293 on 2 and 9 DF,  p-value: 0.3208
+
+
+Call:
+lm(formula = Shooting ~ . * ., data = tb_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.0250 -1.5537 -0.1617  1.6914  2.9793 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept) 87.96063   27.64465   3.182    0.013 *
+Seasons     -3.93926    3.47751  -1.133    0.290  
+Lag         -0.95524    0.62334  -1.532    0.164  
+Seasons:Lag  0.08460    0.07852   1.077    0.313  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.207 on 8 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.3217,	Adjusted R-squared:  0.06731 
+F-statistic: 1.265 on 3 and 8 DF,  p-value: 0.35
+
+
+Call:
+lm(formula = Shooting ~ poly(Seasons, 2) + Lag, data = tb_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.2008 -1.2776 -0.1949  1.9571  2.4330 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(>|t|)   
+(Intercept)        60.5181    13.1599   4.599  0.00176 **
+poly(Seasons, 2)1  -3.2404     2.7298  -1.187  0.26925   
+poly(Seasons, 2)2   1.8931     2.8153   0.672  0.52025   
+Lag                -0.3644     0.2973  -1.225  0.25525   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.298 on 8 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.2648,	Adjusted R-squared:  -0.0109 
+F-statistic: 0.9605 on 3 and 8 DF,  p-value: 0.4569
+
+
+
+
+
+
+Call:
+lm(formula = Shooting ~ ., data = kk_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6.7111 -2.3872 -0.5161  1.9059  8.3709 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  53.4776    17.3454   3.083   0.0131 *
+Seasons       0.6813     0.5281   1.290   0.2292  
+Lag          -0.1388     0.3691  -0.376   0.7157  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 5.33 on 9 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.167,	Adjusted R-squared:  -0.0181 
+F-statistic: 0.9022 on 2 and 9 DF,  p-value: 0.4394
+
+
+Call:
+lm(formula = Shooting ~ . * ., data = kk_df)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-7.118 -2.438 -1.396  2.247  8.094 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)   2.4302    54.9815   0.044    0.966
+Seasons       8.4109     7.9159   1.063    0.319
+Lag           0.8612     1.0867   0.792    0.451
+Seasons:Lag  -0.1477     0.1509  -0.979    0.356
+
+Residual standard error: 5.343 on 8 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.2561,	Adjusted R-squared:  -0.02289 
+F-statistic: 0.9179 on 3 and 8 DF,  p-value: 0.4746
+
+
+Call:
+lm(formula = Shooting ~ poly(Seasons, 2) + Lag, data = kk_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-7.5137 -3.3676 -0.4414  2.9759  6.6383 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(>|t|)  
+(Intercept)        57.1934    18.2158   3.140   0.0138 *
+poly(Seasons, 2)1  11.6030     7.0573   1.644   0.1388  
+poly(Seasons, 2)2  -8.4095     6.2556  -1.344   0.2157  
+Lag                -0.1268     0.3537  -0.358   0.7293  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 5.106 on 8 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.3205,	Adjusted R-squared:  0.0657 
+F-statistic: 1.258 on 3 and 8 DF,  p-value: 0.352
+
