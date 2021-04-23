@@ -1,3 +1,404 @@
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c colorspace.c -o colorspace.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o colorspace.so colorspace.o init.o -L/usr/lib/R/lib -lR
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c as_utf8.c -o as_utf8.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bytes.c -o bytes.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c context.c -o context.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c render.c -o render.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c render_table.c -o render_table.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c string.c -o string.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c text.c -o text.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8_encode.c -o utf8_encode.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8_format.c -o utf8_format.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8_normalize.c -o utf8_normalize.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8_valid.c -o utf8_valid.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8_width.c -o utf8_width.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c util.c -o util.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8lite/src/array.c -o utf8lite/src/array.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8lite/src/char.c -o utf8lite/src/char.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8lite/src/encode.c -o utf8lite/src/encode.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8lite/src/error.c -o utf8lite/src/error.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8lite/src/escape.c -o utf8lite/src/escape.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8lite/src/graph.c -o utf8lite/src/graph.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8lite/src/graphscan.c -o utf8lite/src/graphscan.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8lite/src/normalize.c -o utf8lite/src/normalize.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8lite/src/render.c -o utf8lite/src/render.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8lite/src/text.c -o utf8lite/src/text.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8lite/src/textassign.c -o utf8lite/src/textassign.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8lite/src/textiter.c -o utf8lite/src/textiter.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -Iutf8lite/src -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8lite/src/textmap.c -o utf8lite/src/textmap.o
+ar rcs libcutf8lite.a utf8lite/src/array.o utf8lite/src/char.o utf8lite/src/encode.o utf8lite/src/error.o utf8lite/src/escape.o utf8lite/src/graph.o utf8lite/src/graphscan.o utf8lite/src/normalize.o utf8lite/src/render.o utf8lite/src/text.o utf8lite/src/textassign.o utf8lite/src/textiter.o utf8lite/src/textmap.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o utf8.so as_utf8.o bytes.o context.o init.o render.o render_table.o string.o text.o utf8_encode.o utf8_format.o utf8_normalize.o utf8_valid.o utf8_width.o util.o -L. -lcutf8lite -L/usr/lib/R/lib -lR
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ColorSpace.cpp -o ColorSpace.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Comparison.cpp -o Comparison.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Conversion.cpp -o Conversion.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c encode.cpp -o encode.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c farver.cpp -o farver.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.cpp -o init.o
+g++ -std=gnu++11 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o farver.so ColorSpace.o Comparison.o Conversion.o encode.o farver.o init.o -L/usr/lib/R/lib -lR
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c assumptions.c -o assumptions.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c has.c -o has.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nchar.c -o nchar.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read.c -o read.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rnchar.c -o rnchar.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c state.c -o state.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c strip.c -o strip.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c strsplit.c -o strsplit.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tabs.c -o tabs.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tohtml.c -o tohtml.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c unhandled.c -o unhandled.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c unique.c -o unique.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utf8.c -o utf8.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils.c -o utils.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c wrap.c -o wrap.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o fansi.so assumptions.o has.o init.o nchar.o read.o rnchar.o state.o strip.o strsplit.o tabs.o tohtml.o unhandled.o unique.o utf8.o utils.o wrap.o -L/usr/lib/R/lib -lR
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rawmatch.c -o rawmatch.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o mime.so init.o rawmatch.o -L/usr/lib/R/lib -lR
+checking for R_HOME... /usr/lib/R
+checking for R... /usr/lib/R/bin/R
+checking for endianness... little
+checking for R >= 3.1.0 for C++11 use... yes
+checking for R < 3.4.0 for CXX1X flag use... no
+checking for cat... /usr/bin/cat
+checking for local ICUDT_DIR... icu61/data
+checking for gcc... gcc -std=gnu99
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc -std=gnu99 accepts -g... yes
+checking for gcc -std=gnu99 option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -std=gnu99 -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking elf.h usability... yes
+checking elf.h presence... yes
+checking for elf.h... yes
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -std=gnu++11 accepts -g... yes
+checking whether the C++ compiler supports the long long type... yes
+checking whether the compiler implements namespaces... yes
+checking whether the compiler supports Standard Template Library... yes
+checking whether std::map is available... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking with pkg-config for the system ICU4C... 66.1
+checking for ICU4C >= 55... yes
+checking for additional required CPPFLAGS, LDFLAGS, and LIBS... done
+checking whether we may build an ICU4C-based project... yes
+checking programmatically for sufficient U_ICU_VERSION_MAJOR_NUM... yes
+checking programmatically if U_CHARSET_IS_UTF8 is defined and set... yes
+checking for available ICU data library (ucnv, uloc, utrans)... yes
+checking for available ICU data library (ucol)... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+config.status: creating src/uconfig_local.h
+config.status: creating src/install.libs.R
+
+*** stringi configure summary:
+    ICU_FOUND=1
+    STRINGI_CXXSTD=CXX_STD=CXX11
+    STRINGI_CFLAGS=   -fpic
+    STRINGI_CPPFLAGS=-I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H
+    STRINGI_CXXFLAGS=   -fpic
+    STRINGI_LDFLAGS=-L/usr/lib/x86_64-linux-gnu  
+    STRINGI_LIBS=-licui18n -licuuc -licudata  
+
+*** compiler settings used:
+    CC=gcc -std=gnu99
+    LD=g++ -std=gnu++11
+    CFLAGS=-g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic  
+    CPPFLAGS=   -UDEBUG -DNDEBUG
+    CXX=g++ -std=gnu++11
+    CXXFLAGS=-g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic  
+    LDFLAGS=  
+    LIBS=  
+
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_brkiter.cpp -o stri_brkiter.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_collator.cpp -o stri_collator.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_common.cpp -o stri_common.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_compare.cpp -o stri_compare.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_container_base.cpp -o stri_container_base.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_container_bytesearch.cpp -o stri_container_bytesearch.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_container_listint.cpp -o stri_container_listint.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_container_listraw.cpp -o stri_container_listraw.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_container_listutf8.cpp -o stri_container_listutf8.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_container_regex.cpp -o stri_container_regex.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_container_usearch.cpp -o stri_container_usearch.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_container_utf16.cpp -o stri_container_utf16.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_container_utf8.cpp -o stri_container_utf8.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_container_utf8_indexable.cpp -o stri_container_utf8_indexable.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_encoding_conversion.cpp -o stri_encoding_conversion.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_encoding_detection.cpp -o stri_encoding_detection.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_encoding_management.cpp -o stri_encoding_management.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_escape.cpp -o stri_escape.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_exception.cpp -o stri_exception.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_ICU_settings.cpp -o stri_ICU_settings.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_join.cpp -o stri_join.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_length.cpp -o stri_length.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_pad.cpp -o stri_pad.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_prepare_arg.cpp -o stri_prepare_arg.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_random.cpp -o stri_random.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_reverse.cpp -o stri_reverse.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_class_count.cpp -o stri_search_class_count.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_class_detect.cpp -o stri_search_class_detect.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_class_extract.cpp -o stri_search_class_extract.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_class_locate.cpp -o stri_search_class_locate.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_class_replace.cpp -o stri_search_class_replace.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_class_split.cpp -o stri_search_class_split.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_class_startsendswith.cpp -o stri_search_class_startsendswith.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_class_subset.cpp -o stri_search_class_subset.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_class_trim.cpp -o stri_search_class_trim.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_common.cpp -o stri_search_common.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_coll_count.cpp -o stri_search_coll_count.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_coll_detect.cpp -o stri_search_coll_detect.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_coll_extract.cpp -o stri_search_coll_extract.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_coll_locate.cpp -o stri_search_coll_locate.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_coll_replace.cpp -o stri_search_coll_replace.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_coll_split.cpp -o stri_search_coll_split.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_coll_startsendswith.cpp -o stri_search_coll_startsendswith.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_coll_subset.cpp -o stri_search_coll_subset.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_boundaries_count.cpp -o stri_search_boundaries_count.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_boundaries_extract.cpp -o stri_search_boundaries_extract.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_boundaries_locate.cpp -o stri_search_boundaries_locate.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_boundaries_split.cpp -o stri_search_boundaries_split.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_fixed_count.cpp -o stri_search_fixed_count.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_fixed_detect.cpp -o stri_search_fixed_detect.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_fixed_extract.cpp -o stri_search_fixed_extract.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_fixed_locate.cpp -o stri_search_fixed_locate.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_fixed_replace.cpp -o stri_search_fixed_replace.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_fixed_split.cpp -o stri_search_fixed_split.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_fixed_subset.cpp -o stri_search_fixed_subset.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_fixed_startsendswith.cpp -o stri_search_fixed_startsendswith.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_in.cpp -o stri_search_in.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_other_split.cpp -o stri_search_other_split.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_regex_count.cpp -o stri_search_regex_count.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_regex_detect.cpp -o stri_search_regex_detect.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_regex_extract.cpp -o stri_search_regex_extract.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_regex_locate.cpp -o stri_search_regex_locate.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_regex_match.cpp -o stri_search_regex_match.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_regex_replace.cpp -o stri_search_regex_replace.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_regex_split.cpp -o stri_search_regex_split.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_search_regex_subset.cpp -o stri_search_regex_subset.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_sort.cpp -o stri_sort.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_stats.cpp -o stri_stats.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_stringi.cpp -o stri_stringi.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_sub.cpp -o stri_sub.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_test.cpp -o stri_test.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_time_zone.cpp -o stri_time_zone.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_time_calendar.cpp -o stri_time_calendar.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_time_symbols.cpp -o stri_time_symbols.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_time_format.cpp -o stri_time_format.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_trans_casemap.cpp -o stri_trans_casemap.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_trans_other.cpp -o stri_trans_other.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_trans_normalization.cpp -o stri_trans_normalization.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_trans_transliterate.cpp -o stri_trans_transliterate.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_ucnv.cpp -o stri_ucnv.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_uloc.cpp -o stri_uloc.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_utils.cpp -o stri_utils.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -fpic -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stri_wrap.cpp -o stri_wrap.o
+g++ -std=gnu++11 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o stringi.so stri_brkiter.o stri_collator.o stri_common.o stri_compare.o stri_container_base.o stri_container_bytesearch.o stri_container_listint.o stri_container_listraw.o stri_container_listutf8.o stri_container_regex.o stri_container_usearch.o stri_container_utf16.o stri_container_utf8.o stri_container_utf8_indexable.o stri_encoding_conversion.o stri_encoding_detection.o stri_encoding_management.o stri_escape.o stri_exception.o stri_ICU_settings.o stri_join.o stri_length.o stri_pad.o stri_prepare_arg.o stri_random.o stri_reverse.o stri_search_class_count.o stri_search_class_detect.o stri_search_class_extract.o stri_search_class_locate.o stri_search_class_replace.o stri_search_class_split.o stri_search_class_startsendswith.o stri_search_class_subset.o stri_search_class_trim.o stri_search_common.o stri_search_coll_count.o stri_search_coll_detect.o stri_search_coll_extract.o stri_search_coll_locate.o stri_search_coll_replace.o stri_search_coll_split.o stri_search_coll_startsendswith.o stri_search_coll_subset.o stri_search_boundaries_count.o stri_search_boundaries_extract.o stri_search_boundaries_locate.o stri_search_boundaries_split.o stri_search_fixed_count.o stri_search_fixed_detect.o stri_search_fixed_extract.o stri_search_fixed_locate.o stri_search_fixed_replace.o stri_search_fixed_split.o stri_search_fixed_subset.o stri_search_fixed_startsendswith.o stri_search_in.o stri_search_other_split.o stri_search_regex_count.o stri_search_regex_detect.o stri_search_regex_extract.o stri_search_regex_locate.o stri_search_regex_match.o stri_search_regex_replace.o stri_search_regex_split.o stri_search_regex_subset.o stri_sort.o stri_stats.o stri_stringi.o stri_sub.o stri_test.o stri_time_zone.o stri_time_calendar.o stri_time_symbols.o stri_time_format.o stri_trans_casemap.o stri_trans_other.o stri_trans_normalization.o stri_trans_transliterate.o stri_ucnv.o stri_uloc.o stri_utils.o stri_wrap.o -L/usr/lib/x86_64-linux-gnu -licui18n -licuuc -licudata -L/usr/lib/R/lib -lR
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c SpookyV2.cpp -o SpookyV2.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c aes.c -o aes.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c blake3.c -o blake3.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c blake3_dispatch.c -o blake3_dispatch.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c blake3_portable.c -o blake3_portable.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c crc32.c -o crc32.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c digest.c -o digest.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c digest2int.c -o digest2int.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c md5.c -o md5.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pmurhash.c -o pmurhash.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c raes.c -o raes.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sha1.c -o sha1.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sha2.c -o sha2.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sha256.c -o sha256.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c spooky_serialize.cpp -o spooky_serialize.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c xxhash.c -o xxhash.o
+g++ -std=gnu++11 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o digest.so SpookyV2.o aes.o blake3.o blake3_dispatch.o blake3_portable.o crc32.o digest.o digest2int.o init.o md5.o pmurhash.o raes.o sha1.o sha2.o sha256.o spooky_serialize.o xxhash.o -L/usr/lib/R/lib -lR
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c glue.c -o glue.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trim.c -o trim.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o glue.so glue.o init.o trim.o -L/usr/lib/R/lib -lR
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -Itestthat    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c clip-lines.cpp -o clip-lines.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -Itestthat    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.cpp -o init.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -Itestthat    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c isoband.cpp -o isoband.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -Itestthat    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c polygon.cpp -o polygon.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -Itestthat    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c separate-polygons.cpp -o separate-polygons.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -Itestthat    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c test-clip-lines.cpp -o test-clip-lines.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -Itestthat    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c test-runner.cpp -o test-runner.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -Itestthat    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c test-separate-polygons.cpp -o test-separate-polygons.o
+g++ -std=gnu++11 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o isoband.so clip-lines.o init.o isoband.o polygon.o separate-polygons.o test-clip-lines.o test-runner.o test-separate-polygons.o -L/usr/lib/R/lib -lR
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG -I./lib/   -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c capture.c -o capture.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG -I./lib/   -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c export.c -o export.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG -I./lib/   -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c internal.c -o internal.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG -I./lib/   -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c lib.c -o lib.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG -I./lib/   -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c version.c -o version.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o rlang.so capture.o export.o internal.o lib.o version.o -L/usr/lib/R/lib -lR
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pipe.c -o pipe.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils.c -o utils.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o magrittr.so pipe.o utils.o -L/usr/lib/R/lib -lR
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG -I. -DNDEBUG    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c api.c -o api.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG -I. -DNDEBUG    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dumper.c -o dumper.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG -I. -DNDEBUG    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c emitter.c -o emitter.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG -I. -DNDEBUG    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c implicit.c -o implicit.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG -I. -DNDEBUG    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c loader.c -o loader.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG -I. -DNDEBUG    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c parser.c -o parser.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG -I. -DNDEBUG    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c r_emit.c -o r_emit.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG -I. -DNDEBUG    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c r_ext.c -o r_ext.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG -I. -DNDEBUG    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c r_parse.c -o r_parse.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG -I. -DNDEBUG    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c reader.c -o reader.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG -I. -DNDEBUG    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scanner.c -o scanner.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG -I. -DNDEBUG    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c writer.c -o writer.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o yaml.so api.o dumper.o emitter.o implicit.o loader.o parser.o r_emit.o r_ext.o r_parse.o reader.o scanner.o writer.o -L/usr/lib/R/lib -lR
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c base64.c -o base64.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+g++ -std=gnu++11 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o xfun.so base64.o init.o -L/usr/lib/R/lib -lR
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c backports.c -o backports.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c coerce.c -o coerce.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c conditions.c -o conditions.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c flatten.c -o flatten.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c map.c -o map.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pluck.c -o pluck.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c transpose.c -o transpose.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils.c -o utils.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o purrr.so backports.o coerce.o conditions.o flatten.o init.o map.o pluck.o transpose.o utils.o -L/usr/lib/R/lib -lR
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dots.c -o dots.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o ellipsis.so dots.o init.o -L/usr/lib/R/lib -lR
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Rbase64.c -o Rbase64.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Rinit.c -o Rinit.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Rmarkdown.c -o Rmarkdown.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c autolink.c -o autolink.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c buffer.c -o buffer.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c houdini_href_e.c -o houdini_href_e.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c houdini_html_e.c -o houdini_html_e.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c html.c -o html.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c html_smartypants.c -o html_smartypants.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c markdown.c -o markdown.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stack.c -o stack.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o markdown.so Rbase64.o Rinit.o Rmarkdown.o autolink.o buffer.o houdini_href_e.o houdini_html_e.o html.o html_smartypants.o markdown.o stack.o -L/usr/lib/R/lib -lR
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R-rng4ftn.c -o R-rng4ftn.o
+gfortran -fno-optimize-sibling-calls  -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong  -c eigen.f -o eigen.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c lmrob.c -o lmrob.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mc.c -o mc.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c monitor.c -o monitor.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c qn_sn.c -o qn_sn.o
+gfortran -fno-optimize-sibling-calls  -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong  -c rf-common.f -o rf-common.o
+gfortran -fno-optimize-sibling-calls  -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong  -c rffastmcd.f -o rffastmcd.o
+gfortran -fno-optimize-sibling-calls  -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong  -c rfltsreg.f -o rfltsreg.o
+gfortran -fno-optimize-sibling-calls  -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong  -c rllarsbi.f -o rllarsbi.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rob-utils.c -o rob-utils.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rowMedians.c -o rowMedians.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c wgt_himed.c -o wgt_himed.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o robustbase.so R-rng4ftn.o eigen.o init.o lmrob.o mc.o monitor.o qn_sn.o rf-common.o rffastmcd.o rfltsreg.o rllarsbi.o rob-utils.o rowMedians.o wgt_himed.o -llapack -lblas -lgfortran -lm -lquadmath -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+Creating a generic function from function ‘chgDefaults’ in package ‘robustbase’
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c altrep-rle.c -o altrep-rle.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c arg-counter.c -o arg-counter.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c arg.c -o arg.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bind.c -o bind.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c c-unchop.c -o c-unchop.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c c.c -o c.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c callables.c -o callables.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cast-bare.c -o cast-bare.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cast-dispatch.c -o cast-dispatch.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cast.c -o cast.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c compare.c -o compare.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c complete.c -o complete.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c conditions.c -o conditions.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dictionary.c -o dictionary.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dim.c -o dim.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c equal.c -o equal.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fields.c -o fields.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fill.c -o fill.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c group.c -o group.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c growable.c -o growable.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hash.c -o hash.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c names.c -o names.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c order-groups.c -o order-groups.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c order-radix.c -o order-radix.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c order-sortedness.c -o order-sortedness.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c order-transform.c -o order-transform.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c order-truelength.c -o order-truelength.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c poly-op.c -o poly-op.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c proxy-restore.c -o proxy-restore.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c proxy.c -o proxy.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ptype2-dispatch.c -o ptype2-dispatch.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rep.c -o rep.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c runs.c -o runs.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c shape.c -o shape.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c size-common.c -o size-common.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c size.c -o size.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c slice-array.c -o slice-array.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c slice-assign-array.c -o slice-assign-array.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c slice-assign.c -o slice-assign.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c slice-chop.c -o slice-chop.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c slice.c -o slice.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c split.c -o split.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c subscript-loc.c -o subscript-loc.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c subscript.c -o subscript.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c translate.c -o translate.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c type-data-frame.c -o type-data-frame.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c type-date-time.c -o type-date-time.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c type-factor.c -o type-factor.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c type-info.c -o type-info.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c type-tibble.c -o type-tibble.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c type.c -o type.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c type2.c -o type2.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c typeof2-s3.c -o typeof2-s3.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c typeof2.c -o typeof2.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c unspecified.c -o unspecified.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils-dispatch.c -o utils-dispatch.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils-rlang.c -o utils-rlang.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils.c -o utils.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG    -fvisibility=hidden -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c version.c -o version.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o vctrs.so altrep-rle.o arg-counter.o arg.o bind.o c-unchop.o c.o callables.o cast-bare.o cast-dispatch.o cast.o compare.o complete.o conditions.o dictionary.o dim.o equal.o fields.o fill.o group.o growable.o hash.o init.o names.o order-groups.o order-radix.o order-sortedness.o order-transform.o order-truelength.o poly-op.o proxy-restore.o proxy.o ptype2-dispatch.o rep.o runs.o shape.o size-common.o size.o slice-array.o slice-assign-array.o slice-assign.o slice-chop.o slice.o split.o subscript-loc.o subscript.o translate.o type-data-frame.o type-date-time.o type-factor.o type-info.o type-tibble.o type.o type2.o typeof2-s3.o typeof2.o unspecified.o utils-dispatch.o utils-rlang.o utils.o version.o -L/usr/lib/R/lib -lR
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c attributes.c -o attributes.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c coerce.c -o coerce.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -std=gnu99 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrixToDataFrame.c -o matrixToDataFrame.o
+gcc -std=gnu99 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o tibble.so attributes.o coerce.o init.o matrixToDataFrame.o -L/usr/lib/R/lib -lR
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chop.cpp -o chop.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c filter.cpp -o filter.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c funs.cpp -o funs.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c group_by.cpp -o group_by.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c group_data.cpp -o group_data.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c imports.cpp -o imports.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.cpp -o init.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mask.cpp -o mask.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mutate.cpp -o mutate.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c slice.cpp -o slice.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c summarise.cpp -o summarise.o
+g++ -std=gnu++11 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o dplyr.so chop.o filter.o funs.o group_by.o group_data.o imports.o init.o mask.o mutate.o slice.o summarise.o -L/usr/lib/R/lib -lR
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chop.cpp -o chop.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c filter.cpp -o filter.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c funs.cpp -o funs.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c group_by.cpp -o group_by.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c group_data.cpp -o group_data.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c imports.cpp -o imports.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.cpp -o init.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mask.cpp -o mask.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mutate.cpp -o mutate.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c slice.cpp -o slice.o
+g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG     -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-jbaK_j/r-base-3.6.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c summarise.cpp -o summarise.o
+g++ -std=gnu++11 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o dplyr.so chop.o filter.o funs.o group_by.o group_data.o imports.o init.o mask.o mutate.o slice.o summarise.o -L/usr/lib/R/lib -lR
 [1] "List of starting FG %:"
  [1] 53.8 52.5 26.5 44.1 40.0 42.2 41.8 53.4 36.1 43.0 41.9 45.3 46.1 42.5 50.8
 [16] 48.4 52.7 55.6 41.4 45.2
@@ -225,60 +626,7 @@ null device
 
 
 
-   full grouping
-1  53.4        1
-2  41.7        1
-3  49.0        1
-4  51.9        1
-5  49.7        1
-6  46.7        1
-7  48.6        1
-8  49.1        1
-9  47.5        1
-10 48.1        1
-11 46.1        1
-12 37.9        1
-13 44.7        1
-14 41.9        2
-15 47.8        2
-16 42.0        2
-17 44.8        2
-18 46.5        2
-19 43.8        2
-20 46.4        2
-21 41.8        2
-22 42.5        2
-23 40.9        2
-24 46.6        2
-25 45.1        2
-26 42.5        2
-27 50.8        3
-28 46.8        3
-29 45.3        3
-30 50.0        3
-31 43.5        3
-32 59.9        3
-33 58.1        3
-34 49.5        3
-35 50.8        3
-36 53.2        3
-37 55.1        3
-38 57.1        3
-39 47.7        3
-
-
-
-
-Call:
-   aov(formula = full ~ grouping, data = reg)
-
-Terms:
-                grouping Residuals
-Sum of Squares  350.3036  570.6308
-Deg. of Freedom        2        36
-
-Residual standard error: 3.981313
-Estimated effects may be unbalanced
+[1] "Running an anova test if the players shooting percentages have equal means"
             Df Sum Sq Mean Sq F value   Pr(>F)    
 grouping     2  350.3  175.15   11.05 0.000181 ***
 Residuals   36  570.6   15.85                     
@@ -288,6 +636,7 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 
 
 
+[1] "David Corzine info with lag"
    Shooting Seasons  Lag
 1      53.4       1   NA
 2      41.7       2 53.4
@@ -306,6 +655,7 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 
 
 
+[1] "Terrell Brandon info with lag"
    Shooting Seasons  Lag
 1      41.9       1   NA
 2      47.8       2 41.9
@@ -324,6 +674,7 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 
 
 
+[1] "Kosta Koufas info with lag"
    Shooting Seasons  Lag
 1      50.8       1   NA
 2      46.8       2 50.8
@@ -342,6 +693,7 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 
 
 
+[1] "Running a linear regression on David Corzine with lag"
 
 Call:
 lm(formula = Shooting ~ ., data = dc_df)
@@ -365,6 +717,7 @@ F-statistic: 0.8223 on 2 and 9 DF,  p-value: 0.4699
 
 null device 
           1 
+[1] "Running a linear regression on David Corzine with lag"
 
 Call:
 lm(formula = Shooting ~ . * ., data = dc_df)
@@ -389,6 +742,7 @@ F-statistic: 0.9184 on 3 and 8 DF,  p-value: 0.4744
 
 null device 
           1 
+[1] "Running a linear regression on David Corzine with lag"
 
 Call:
 lm(formula = Shooting ~ poly(Seasons, 2) + Lag, data = dc_df)
@@ -417,6 +771,7 @@ null device
 
 
 
+[1] "Running a linear regression on Terrell Brandon with lag"
 
 Call:
 lm(formula = Shooting ~ ., data = tb_df)
@@ -440,6 +795,7 @@ F-statistic: 1.293 on 2 and 9 DF,  p-value: 0.3208
 
 null device 
           1 
+[1] "Running a linear regression on Terrell Brandon with lag"
 
 Call:
 lm(formula = Shooting ~ . * ., data = tb_df)
@@ -464,6 +820,7 @@ F-statistic: 1.265 on 3 and 8 DF,  p-value: 0.35
 
 null device 
           1 
+[1] "Running a linear regression on Terrell Brandon with lag"
 
 Call:
 lm(formula = Shooting ~ poly(Seasons, 2) + Lag, data = tb_df)
@@ -492,6 +849,7 @@ null device
 
 
 
+[1] "Running a linear regression on Kosta Koufas with lag"
 
 Call:
 lm(formula = Shooting ~ ., data = kk_df)
@@ -515,6 +873,7 @@ F-statistic: 0.9022 on 2 and 9 DF,  p-value: 0.4394
 
 null device 
           1 
+[1] "Running a linear regression on Kosta Koufas with lag"
 
 Call:
 lm(formula = Shooting ~ . * ., data = kk_df)
@@ -537,6 +896,7 @@ F-statistic: 0.9179 on 3 and 8 DF,  p-value: 0.4746
 
 null device 
           1 
+[1] "Running a linear regression on Kosta Koufas with lag"
 
 Call:
 lm(formula = Shooting ~ poly(Seasons, 2) + Lag, data = kk_df)
